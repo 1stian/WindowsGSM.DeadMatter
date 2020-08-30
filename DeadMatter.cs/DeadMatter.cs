@@ -17,7 +17,7 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.DeadMatter", // WindowsGSM.XXXX
             author = "1stian",
             description = "WindowsGSM plugin that adds support for Dead Matter Dedicated server.",
-            version = "1.1",
+            version = "1.2",
             url = "https://github.com/1stian/WindowsGSM.DeadMatter", // Github repository link (Best practice)
             color = "#e84646" // Color Hex
         };
@@ -53,10 +53,7 @@ namespace WindowsGSM.Plugins
         {
             // Creating config path
             string configDir = Path.Combine(ServerPath.GetServersServerFiles(_serverData.ServerID), @"deadmatter\Saved\Config\WindowsServer");
-            if (!Directory.Exists(configDir))
-            {
-                Directory.CreateDirectory(configDir);
-            }
+            Directory.CreateDirectory(configDir);
 
             // Ini files
             string gameINI = Path.Combine(configDir, "Game.ini");
