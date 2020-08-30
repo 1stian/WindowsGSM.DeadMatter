@@ -33,7 +33,7 @@ namespace WindowsGSM.Plugins
 
 
         // - Game server Fixed variables
-        public override string StartPath => @"deadmatter\Binaries\Win64\deadmatterServer-Win64-Shipping.exe"; // Game server start path
+        public override string StartPath => "deadmatterServer.exe"; // Game server start path
         public string FullName = "Deadmatter"; // Game server FullName
         public bool AllowsEmbedConsole = true;  // Does this server support output redirect?
         public int PortIncrements = 1; // This tells WindowsGSM how many ports should skip after installation
@@ -92,6 +92,8 @@ namespace WindowsGSM.Plugins
         // - Start server function, return its Process to WindowsGSM
         public async Task<Process> Start()
         {
+            string runPath = Path.Combine(ServerPath.GetServersServerFiles(_serverData.ServerID), "deadmatter\\Binaries\\Win64\\deadmatterServer-Win64-Shipping.exe");
+
             string param = "-log";
             param += $" {_serverData.ServerParam}";
 
@@ -102,7 +104,7 @@ namespace WindowsGSM.Plugins
                 {
                     UseShellExecute = false,
                     WorkingDirectory = ServerPath.GetServersServerFiles(_serverData.ServerID),
-                    FileName = StartPath,
+                    FileName = runPath,
                     Arguments = param.ToString()
                 },
                 EnableRaisingEvents = true
