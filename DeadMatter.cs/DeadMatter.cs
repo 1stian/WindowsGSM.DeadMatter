@@ -23,7 +23,7 @@ namespace WindowsGSM.Plugins
         };
 
         // - Settings properties for SteamCMD installer
-        public override bool loginAnonymous => true;
+        public override bool loginAnonymous => false;
         public override string AppId => "1110990"; // Game server appId, Dead Matter is 1110990
 
         // - Standard Constructor and properties
