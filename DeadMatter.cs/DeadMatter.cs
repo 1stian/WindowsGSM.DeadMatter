@@ -76,6 +76,7 @@ namespace WindowsGSM.Plugins
 
             // Port related - Game ini
             sbGame.AppendLine("[/Script/deadmatter.ServerInfoProxy]");
+            sbGame.AppendLine($"SteamQueryIP={_serverData.ServerIP}");
             sbGame.AppendLine($"SteamQueryPort={_serverData.ServerQueryPort}");
             File.WriteAllText(gameINI, sbGame.ToString());
 
