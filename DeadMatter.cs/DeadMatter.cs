@@ -17,7 +17,7 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.DeadMatter", // WindowsGSM.XXXX
             author = "1stian",
             description = "WindowsGSM plugin that adds support for Dead Matter Dedicated server.",
-            version = "1.0",
+            version = "1.1",
             url = "https://github.com/1stian/WindowsGSM.DeadMatter", // Github repository link (Best practice)
             color = "#e84646" // Color Hex
         };
@@ -64,7 +64,7 @@ namespace WindowsGSM.Plugins
 
             // Game ini
             var sbGame = new StringBuilder();
-            sbGame.AppendLine("[/Script/DeadMatter.SurvivalBaseGameState]");
+            sbGame.AppendLine("[/Script/DeadMatter.DMGameSession]");
             sbGame.AppendLine($"ServerName={_serverData.ServerName}");
             sbGame.AppendLine("+SuperAdmins=<your steam id>");
             sbGame.AppendLine(@"ServerTags=""Key: Pair""");
