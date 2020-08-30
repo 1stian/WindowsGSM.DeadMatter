@@ -9,5 +9,8 @@ WindowsGSM plugin for supporting Dead Matter Dedicated Server
 1. Move **DeadMatter.cs** folder to **plugins** folder
 1. Click **[RELOAD PLUGINS]** button or restart WindowsGSM
 
+## NOTE!
+As I did not have access to test this myself, please report bugs or anything that goes wrong on the WindowsGSM or as an issue here! Thanks!
+
 ### License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/1stian/WindowsGSM.DeadMatter/blob/master/LICENSE) file for details
